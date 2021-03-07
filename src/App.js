@@ -22,20 +22,27 @@ const App = () => {
         setHigh={setHigh}
       />
 
+      <h2>Pinned</h2>
+
       <h2>High</h2>
       <TodoList
         todo={high}
+        setTodo={setHigh}
       />
 
       <h2>Mid</h2>
       <TodoList
         todo={mid}
+        setTodo={setMid}
       />
 
       <h2>Low</h2>
       <TodoList
         todo={low}
-      />      
+        setTodo={setLow}
+      />
+
+      <h2>Done</h2>
     </div>
   );
 }

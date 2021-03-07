@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const Input = ({inputText, setInputText, low, setLow, mid, setMid, high, setHigh}) => {
+const Input = ({inputText, setInputText, low, setLow, mid, setMid, high, setHigh, done, setDone}) => {
     const [priority, setPriority] = useState();
 
     const inputTextHandler = (e) => {

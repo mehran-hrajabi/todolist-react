@@ -1,9 +1,25 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-const Todo = ({text}) => {
+const Todo = ({text, task, todo, setTodo}) => {
+    const removeHandler = () => {
+        setTodo(todo.filter((element) => element.id !== task.id));
+    }
+    const completedHandler = () => {
+        setTodo(todo.map((item)=>{
+            return{
+                ...item, priority: "5"
+            }
+        }));
+    }
     return(
         <div>
             <li>{text}</li>
+            <button onClick={removeHandler}>
+                <i className="fas fa-trash"></i>
+            </button>
+            <button onClick={completedHandler}>
+                <i className="fas fa-check"></i>
+            </button>
         </div>
     )
 }
