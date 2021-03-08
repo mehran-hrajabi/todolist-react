@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Todo = ({text, task, todo, setTodo}) => {
+const Todo = ({text, task, todo, setTodo, done, setDone}) => {
     const removeHandler = () => {
         setTodo(todo.filter((element) => element.id !== task.id));
     }
@@ -10,6 +10,10 @@ const Todo = ({text, task, todo, setTodo}) => {
                 ...item, priority: "5"
             }
         }));
+        setDone([
+            ...done,task
+        ]);
+        removeHandler();
     }
     return(
         <div>

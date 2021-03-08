@@ -1,7 +1,7 @@
 import React from 'react';
 import Todo from '../Todo/Todo';
 
-const TodoList = ({todo, setTodo}) => {
+const TodoList = ({todo, setTodo, done, setDone}) => {
     return(
         <div>
             <ul>
@@ -12,6 +12,8 @@ const TodoList = ({todo, setTodo}) => {
                         todo={todo}
                         task={task}
                         setTodo={setTodo}
+                        done={done}
+                        setDone={setDone}
                     />
                 ))}
             </ul>
