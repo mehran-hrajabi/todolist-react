@@ -9,7 +9,7 @@ const TodoList = ({todo, setTodo, done, setDone, pinned, setPinned}) => {
                 {todo.map((task) => (
                     <Todo
                         text={task.text}
-                        id={task.id}
+                        key={task.id}
                         todo={todo}
                         task={task}
                         setTodo={setTodo}

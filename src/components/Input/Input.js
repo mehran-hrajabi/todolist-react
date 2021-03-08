@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { v4 as uuidv4 } from 'uuid';
 import Icon from '../Icon/Icon';
 import '../../assets/sass/components/Input/_input.scss';
 
@@ -14,22 +15,22 @@ const Input = ({inputText, setInputText, low, setLow, mid, setMid, high, setHigh
         switch (priority) {
             case "2":
                 setHigh([
-                    ...high, {text:inputText, priority:priority, id:inputText}
+                    ...high, {text:inputText, priority:priority, id: uuidv4()}
                 ]);
                 break;
             case "3":
                 setMid([
-                    ...mid, {text:inputText, priority:priority, id:inputText}
+                    ...mid, {text:inputText, priority:priority, id: uuidv4()}
                 ]);
                 break;
             case "4":
                 setLow([
-                    ...low, {text:inputText, priority:priority, id:inputText}
+                    ...low, {text:inputText, priority:priority, id: uuidv4()}
                 ]);
                 break;
             default:
                 setHigh([
-                    ...high, {text:inputText, priority:priority}
+                    ...high, {text:inputText, priority:priority, id: uuidv4()}
                 ]);
                 break;
         }

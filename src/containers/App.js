@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import Input from './components/Input/Input';
-import TodoList from './components/TodoList/TodoList';
-import './assets/sass/containers/App/_app.scss';
+import Input from '../components/Input/Input';
+import TodoList from '../components/TodoList/TodoList';
+import '../assets/sass/containers/App/_app.scss';
 
 const App = () => {
   const [inputText, setInputText] = useState("");
