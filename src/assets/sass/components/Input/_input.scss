@@ -16,3 +16,31 @@
         font-size: 20px;
     }
 }
+
+@media only screen and (min-width: $mobileBp) and (max-width: $tabletBp) {
+    .task-input{
+        input{width: 300px;}
+    }
+}
+@media only screen and (min-width: $smallMobileBp) and (max-width: $mobileBp) {
+    .task-input{
+        @include flex(column, center, center);
+        margin-bottom: 50px;
+        input{width: 250px;}
+        select{
+            width: 150px;
+            margin: 10px 0;
+        }
+    }
+}
+@media only screen and (max-width: $smallMobileBp) {
+    .task-input{
+        @include flex(column, center, center);
+        margin-bottom: 50px;
+        input{width: 200px;}
+        select{
+            width: 150px;
+            margin: 10px 0;
+        }
+    }
+}
