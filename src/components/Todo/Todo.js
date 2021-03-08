@@ -1,4 +1,5 @@
 import React from 'react';
+import Icon from '../Icon/Icon';
 
 const Todo = ({text, task, todo, setTodo, done, setDone, pinned, setPinned}) => {
     const removeHandler = () => {
@@ -32,15 +33,9 @@ const Todo = ({text, task, todo, setTodo, done, setDone, pinned, setPinned}) => 
     return(
         <div>
             <li>{text}</li>
-            <button onClick={removeHandler}>
-                <i className="fas fa-trash"></i>
-            </button>
-            <button onClick={completedHandler}>
-                <i className="fas fa-check"></i>
-            </button>
-            <button onClick={pinHandler}>
-                <i className="fas fa-thumbtack"></i>
-            </button>
+            <Icon clicked={removeHandler} style={"fas fa-trash"} />
+            <Icon clicked={completedHandler} style={"fas fa-check"} />
+            <Icon clicked={pinHandler} style={"fas fa-thumbtack"} />
         </div>
     )
 }
