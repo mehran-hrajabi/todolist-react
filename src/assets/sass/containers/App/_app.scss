@@ -1,0 +1,11 @@
+@import '../../base/base';
+
+.app{
+    @include flex(column, center, center);
+    border: 2px solid black;
+    padding: 50px;
+    margin: auto;
+    background-color: $originalPurple;
+    border-radius: 20px;
+    width: 75%;
+}

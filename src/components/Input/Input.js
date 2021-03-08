@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import Icon from '../Icon/Icon';
+import '../../assets/sass/components/Input/_input.scss';
 
 const Input = ({inputText, setInputText, low, setLow, mid, setMid, high, setHigh}) => {
     const [priority, setPriority] = useState();
@@ -39,17 +41,15 @@ const Input = ({inputText, setInputText, low, setLow, mid, setMid, high, setHigh
     }
 
     return(
-        <div>
-            <input type="text" value={inputText} onChange={inputTextHandler} />
-            <button type="submit" onClick={setTodoHandler}>
-                <i className="fas fa-plus-square"></i>
-            </button>
+        <div className="task-input">
+            <input type="text" placeholder="Task description" value={inputText} onChange={inputTextHandler} />
             <select onChange={setPriorityHandler}>
                 <option value="">Select priority</option>
                 <option value={2}>High</option>
                 <option value={3}>Mid</option>
                 <option value={4}>Low</option>
             </select>
+            <Icon clicked={setTodoHandler} iconType="submit" btnType="submit" />
         </div>
     );
 }

@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import Input from './components/Input/Input';
 import TodoList from './components/TodoList/TodoList';
+import './assets/sass/containers/App/_app.scss';
 
 const App = () => {
   const [inputText, setInputText] = useState("");
@@ -11,7 +12,7 @@ const App = () => {
   const [pinned, setPinned] = useState([]);
 
   return (
-    <div>
+    <div className="app">
       <h1>Todo List</h1>
       <Input
         inputText={inputText}
@@ -24,7 +25,7 @@ const App = () => {
         setHigh={setHigh}
       />
 
-      <h2>Pinned</h2>
+      <h1>Pinned</h1>
       <TodoList
         todo={pinned}
         setTodo={setPinned}
@@ -34,7 +35,7 @@ const App = () => {
         setPinned={setPinned}
       />
 
-      <h2>High</h2>
+      <h1>High</h1>
       <TodoList
         todo={high}
         setTodo={setHigh}
@@ -44,7 +45,7 @@ const App = () => {
         setPinned={setPinned}
       />
 
-      <h2>Mid</h2>
+      <h1>Mid</h1>
       <TodoList
         todo={mid}
         setTodo={setMid}
@@ -54,7 +55,7 @@ const App = () => {
         setPinned={setPinned}
       />
 
-      <h2>Low</h2>
+      <h1>Low</h1>
       <TodoList
         todo={low}
         setTodo={setLow}
@@ -64,7 +65,7 @@ const App = () => {
         setPinned={setPinned}
       />
 
-      <h2>Done</h2>
+      <h1>Done</h1>
       <TodoList
         todo={done}
         setTodo={setDone}

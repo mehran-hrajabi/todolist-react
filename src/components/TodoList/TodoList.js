@@ -1,5 +1,6 @@
 import React from 'react';
 import Todo from '../Todo/Todo';
+import '../../assets/sass/components/TodoList/_todoList.scss';
 
 const TodoList = ({todo, setTodo, done, setDone, pinned, setPinned}) => {
     return(

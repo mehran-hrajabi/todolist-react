@@ -1,0 +1,26 @@
+@import '../lib/var';
+@import '../lib/mixins';
+
+*{
+    font-family: 'Times New Roman', Times, serif;
+    font-style: normal;
+    font-weight: normal;
+    box-sizing : border-box;
+}
+
+body{
+    background-color: white;
+}
+
+h1, h2, h3, p{color: white;}
+
+button, input, select{
+    outline: none;
+    border: none;
+    height: 48px;
+}
+button{width: 48px;}
+button,select{cursor: pointer;}
+
+.hidden{display: none;}
+.show{display: block;}

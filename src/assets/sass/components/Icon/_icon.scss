@@ -1,0 +1,17 @@
+@import '../../base/base';
+
+.icon-basic{
+    border-radius: 5px;
+    margin: 0 5px; 
+}
+.task-iconBtn{
+    @extend .icon-basic;
+    color: $elementOrange;
+    background-color: inherit;
+    &:hover{color: $elementYellow;}
+}
+.submit-iconBtn{
+    @extend .icon-basic;
+    background-color: $elementOrange;
+    &:hover{background-color: $elementYellow;}
+}

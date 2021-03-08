@@ -1,5 +1,6 @@
 import React from 'react';
 import Icon from '../Icon/Icon';
+import '../../assets/sass/components/Todo/_todo.scss';
 
 const Todo = ({text, task, todo, setTodo, done, setDone, pinned, setPinned}) => {
     const removeHandler = () => {
@@ -31,11 +32,13 @@ const Todo = ({text, task, todo, setTodo, done, setDone, pinned, setPinned}) => 
     }
 
     return(
-        <div>
-            <li>{text}</li>
-            <Icon clicked={removeHandler} style={"fas fa-trash"} />
-            <Icon clicked={completedHandler} style={"fas fa-check"} />
-            <Icon clicked={pinHandler} style={"fas fa-thumbtack"} />
+        <div className="task-container">
+            <span>{text}</span>
+            <div>
+                <Icon clicked={removeHandler} iconType="trash" btnType="task" />
+                <Icon clicked={completedHandler} iconType="check" btnType="task" />
+                <Icon clicked={pinHandler} iconType="pin" btnType="task" />                
+            </div>
         </div>
     )
 }

@@ -1,0 +1,16 @@
+@import '../../base/base';
+
+.task-container{
+    @include flex(row, center, space-between);
+    border: 1px solid $border;
+    border-radius: 5px;
+    background-color: $elementPurple;
+    height: 70px;
+    width: 500px;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    span{
+        color: white;
+        font-size: 20px;
+    }
+}
