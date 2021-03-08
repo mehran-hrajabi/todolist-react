@@ -8,6 +8,7 @@ const App = () => {
   const [mid, setMid] = useState([]);
   const [high, setHigh] = useState([]);
   const [done, setDone] = useState([]);
+  const [pinned, setPinned] = useState([]);
 
   return (
     <div>
@@ -24,6 +25,14 @@ const App = () => {
       />
 
       <h2>Pinned</h2>
+      <TodoList
+        todo={pinned}
+        setTodo={setPinned}
+        done={done}
+        setDone={setDone}
+        pinned={pinned}
+        setPinned={setPinned}
+      />
 
       <h2>High</h2>
       <TodoList
@@ -31,6 +40,8 @@ const App = () => {
         setTodo={setHigh}
         done={done}
         setDone={setDone}
+        pinned={pinned}
+        setPinned={setPinned}
       />
 
       <h2>Mid</h2>
@@ -39,6 +50,8 @@ const App = () => {
         setTodo={setMid}
         done={done}
         setDone={setDone}
+        pinned={pinned}
+        setPinned={setPinned}
       />
 
       <h2>Low</h2>
@@ -47,6 +60,8 @@ const App = () => {
         setTodo={setLow}
         done={done}
         setDone={setDone}
+        pinned={pinned}
+        setPinned={setPinned}
       />
 
       <h2>Done</h2>
@@ -55,6 +70,8 @@ const App = () => {
         setTodo={setDone}
         done={done}
         setDone={setDone}
+        pinned={pinned}
+        setPinned={setPinned}
       />
     </div>
   );
