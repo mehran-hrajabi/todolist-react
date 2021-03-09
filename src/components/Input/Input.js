@@ -13,17 +13,17 @@ const Input = ({inputText, setInputText, low, setLow, mid, setMid, high, setHigh
     const setTodoHandler = (e) => {
         e.preventDefault();
         switch (priority) {
-            case "2":
+            case "HIGH":
                 setHigh([
                     ...high, {text:inputText, priority:priority, id: uuidv4()}
                 ]);
                 break;
-            case "3":
+            case "MID":
                 setMid([
                     ...mid, {text:inputText, priority:priority, id: uuidv4()}
                 ]);
                 break;
-            case "4":
+            case "LOW":
                 setLow([
                     ...low, {text:inputText, priority:priority, id: uuidv4()}
                 ]);
@@ -43,12 +43,12 @@ const Input = ({inputText, setInputText, low, setLow, mid, setMid, high, setHigh
 
     return(
         <div className="task-input">
-            <input type="text" placeholder="Task description" maxlength="75" value={inputText} onChange={inputTextHandler} />
+            <input type="text" placeholder="Task description" maxLength="75" value={inputText} onChange={inputTextHandler} />
             <select onChange={setPriorityHandler}>
                 <option value="">Select priority</option>
-                <option value={2}>High</option>
-                <option value={3}>Mid</option>
-                <option value={4}>Low</option>
+                <option value="HIGH">High</option>
+                <option value="MID">Mid</option>
+                <option value="LOW">Low</option>
             </select>
             <Icon clicked={setTodoHandler} iconType="submit" btnType="submit" />
         </div>

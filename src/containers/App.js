@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Input from '../components/Input/Input';
 import TodoList from '../components/TodoList/TodoList';
 import '../assets/sass/containers/App/_app.scss';
@@ -10,6 +10,34 @@ const App = () => {
   const [high, setHigh] = useState([]);
   const [done, setDone] = useState([]);
   const [pinned, setPinned] = useState([]);
+
+  useEffect(() => {
+    getFromLocalStorage();
+  }, []);
+
+  useEffect(() => {
+    saveToLocalStorage();
+  },[low, mid, high, done, pinned]);
+
+  const saveToLocalStorage = () => {
+    localStorage.setItem('low', JSON.stringify(low));
+    localStorage.setItem('mid', JSON.stringify(mid));
+    localStorage.setItem('high', JSON.stringify(high));
+    localStorage.setItem('done', JSON.stringify(done));
+    localStorage.setItem('pinned', JSON.stringify(pinned));
+  }
+  const getFromLocalStorage = () => {
+      let lowLocal = JSON.parse(localStorage.getItem("low"));
+      let midLocal = JSON.parse(localStorage.getItem("mid"));
+      let highLocal = JSON.parse(localStorage.getItem("high"));
+      let doneLocal = JSON.parse(localStorage.getItem("done"));
+      let pinnedLocal = JSON.parse(localStorage.getItem("pinned"));
+      setLow(lowLocal);
+      setMid(midLocal);
+      setHigh(highLocal);
+      setDone(doneLocal);
+      setPinned(pinnedLocal);
+  }
 
   return (
     <div className="app">
@@ -74,6 +102,7 @@ const App = () => {
         pinned={pinned}
         setPinned={setPinned}
       />
+      {console.log(done)}
     </div>
   );
 }

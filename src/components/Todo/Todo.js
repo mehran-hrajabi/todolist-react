@@ -8,11 +8,6 @@ const Todo = ({text, task, todo, setTodo, done, setDone, pinned, setPinned}) => 
     }
 
     const completedHandler = () => {
-        setTodo(todo.map((item)=>{
-            return{
-                ...item, priority: "5"
-            }
-        }));
         setDone([
             ...done,task
         ]);
@@ -20,11 +15,6 @@ const Todo = ({text, task, todo, setTodo, done, setDone, pinned, setPinned}) => 
     }
 
     const pinHandler = () => {
-        setTodo(todo.map((item)=>{
-            return{
-                ...item, priority: "1"
-            }
-        }));
         setPinned([
             ...pinned,task
         ]);
