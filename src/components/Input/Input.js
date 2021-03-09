@@ -43,7 +43,7 @@ const Input = ({inputText, setInputText, low, setLow, mid, setMid, high, setHigh
 
     return(
         <div className="task-input">
-            <input type="text" placeholder="Task description" value={inputText} onChange={inputTextHandler} />
+            <input type="text" placeholder="Task description" maxlength="75" value={inputText} onChange={inputTextHandler} />
             <select onChange={setPriorityHandler}>
                 <option value="">Select priority</option>
                 <option value={2}>High</option>

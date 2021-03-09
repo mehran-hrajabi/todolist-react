@@ -33,11 +33,11 @@ const Todo = ({text, task, todo, setTodo, done, setDone, pinned, setPinned}) => 
 
     return(
         <div className="task-container">
-            <span>{text}</span>
+            <p>{text}</p>
             <div>
                 <Icon clicked={removeHandler} iconType="trash" btnType="task" />
                 <Icon clicked={completedHandler} iconType="check" btnType="task" />
-                <Icon clicked={pinHandler} iconType="pin" btnType="task" />                
+                <Icon clicked={pinHandler} iconType="pin" btnType="task" />
             </div>
         </div>
     )

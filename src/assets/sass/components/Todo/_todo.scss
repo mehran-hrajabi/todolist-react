@@ -9,28 +9,42 @@
     width: 500px;
     margin-bottom: 10px;
     padding-left: 10px;
-    span{
+    p{
+        width: 60%;
+        word-break: break-all;
         color: white;
         font-size: 20px;
     }
 }
 
 @media only screen and (min-width: $mobileBp) and (max-width: $tabletBp) {
-    .task-container{width: 400px;}
+    .task-container{
+        height: 90px;
+        width: 400px;
+        p{width: 50%;}
+    }
 }
 @media only screen and (min-width: $smallMobileBp) and (max-width: $mobileBp) {
     .task-container{
         @include flex(column, center, space-between);
         width: 275px;
-        height: 100px;
+        height: 150px;
         padding: 10px;
+        p{
+            margin: 0;
+            width: 100%;
+        }
     }
 }
 @media only screen and (max-width: $smallMobileBp) {
     .task-container{
         @include flex(column, center, space-between);
         width: 200px;
-        height: 100px;
-        padding: 10px;
+        height: 150px;
+        padding: 5px;
+        p{
+            margin: 0;
+            width: 100%;
+        }
     }
 }
