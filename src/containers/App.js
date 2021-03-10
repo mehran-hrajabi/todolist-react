@@ -61,6 +61,8 @@ const App = () => {
         setDone={setDone}
         pinned={pinned}
         setPinned={setPinned}
+        isDoneList={false}
+        isPinnedList={true}
       />
 
       <h1>High</h1>
@@ -71,6 +73,8 @@ const App = () => {
         setDone={setDone}
         pinned={pinned}
         setPinned={setPinned}
+        isDoneList={false}
+        isPinnedList={false}
       />
 
       <h1>Mid</h1>
@@ -81,6 +85,7 @@ const App = () => {
         setDone={setDone}
         pinned={pinned}
         setPinned={setPinned}
+        isPinnedList={false}
       />
 
       <h1>Low</h1>
@@ -91,6 +96,8 @@ const App = () => {
         setDone={setDone}
         pinned={pinned}
         setPinned={setPinned}
+        isDoneList={false}
+        isPinnedList={false}
       />
 
       <h1>Done</h1>
@@ -101,8 +108,9 @@ const App = () => {
         setDone={setDone}
         pinned={pinned}
         setPinned={setPinned}
+        isDoneList={true}
+        isPinnedList={false}
       />
-      {console.log(done)}
     </div>
   );
 }

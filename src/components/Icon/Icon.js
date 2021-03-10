@@ -31,6 +31,12 @@ const Icon = ({clicked, iconType, btnType}) => {
             case "pin":
                 setIconStyle("fas fa-thumbtack fa-2x");
                 break;
+            case "undo":
+                setIconStyle("fas fa-undo-alt fa-2x");
+                break;
+            case "unpin":
+                setIconStyle("fas fa-times fa-2x");
+                break;
             default:
                 break;
         }
