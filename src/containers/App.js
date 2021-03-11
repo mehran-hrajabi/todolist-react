@@ -54,9 +54,12 @@ const App = () => {
         setDone={setDone}
         pinned={pinned}
         setPinned={setPinned}
-        high={high}
-        mid={mid}
         low={low}
+        setLow={setLow}
+        mid={mid}
+        setMid={setMid}
+        high={high}
+        setHigh={setHigh}
         isPinnedList={true}
       />
 
@@ -68,9 +71,12 @@ const App = () => {
         setDone={setDone}
         pinned={pinned}
         setPinned={setPinned}
-        high={high}
-        mid={mid}
         low={low}
+        setLow={setLow}
+        mid={mid}
+        setMid={setMid}
+        high={high}
+        setHigh={setHigh}
       />
 
       <h1>Mid</h1>
@@ -81,9 +87,12 @@ const App = () => {
         setDone={setDone}
         pinned={pinned}
         setPinned={setPinned}
-        high={high}
-        mid={mid}
         low={low}
+        setLow={setLow}
+        mid={mid}
+        setMid={setMid}
+        high={high}
+        setHigh={setHigh}
       />
 
       <h1>Low</h1>
@@ -94,9 +103,12 @@ const App = () => {
         setDone={setDone}
         pinned={pinned}
         setPinned={setPinned}
-        high={high}
-        mid={mid}
         low={low}
+        setLow={setLow}
+        mid={mid}
+        setMid={setMid}
+        high={high}
+        setHigh={setHigh}
       />
 
       <h1>Done</h1>
@@ -108,9 +120,12 @@ const App = () => {
         pinned={pinned}
         setPinned={setPinned}
         isDoneList={true}
-        high={high}
-        mid={mid}
         low={low}
+        setLow={setLow}
+        mid={mid}
+        setMid={setMid}
+        high={high}
+        setHigh={setHigh}
       />
     </div>
   );
