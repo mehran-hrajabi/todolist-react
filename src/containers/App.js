@@ -12,32 +12,25 @@ const App = () => {
   const [pinned, setPinned] = useState([]);
 
   useEffect(() => {
-    getFromLocalStorage();
+    let lowLocal = JSON.parse(localStorage.getItem("low"));
+    let midLocal = JSON.parse(localStorage.getItem("mid"));
+    let highLocal = JSON.parse(localStorage.getItem("high"));
+    let doneLocal = JSON.parse(localStorage.getItem("done"));
+    let pinnedLocal = JSON.parse(localStorage.getItem("pinned"));
+    setLow(lowLocal);
+    setMid(midLocal);
+    setHigh(highLocal);
+    setDone(doneLocal);
+    setPinned(pinnedLocal);
   }, []);
 
   useEffect(() => {
-    saveToLocalStorage();
-  },[low, mid, high, done, pinned]);
-
-  const saveToLocalStorage = () => {
     localStorage.setItem('low', JSON.stringify(low));
     localStorage.setItem('mid', JSON.stringify(mid));
     localStorage.setItem('high', JSON.stringify(high));
     localStorage.setItem('done', JSON.stringify(done));
     localStorage.setItem('pinned', JSON.stringify(pinned));
-  }
-  const getFromLocalStorage = () => {
-      let lowLocal = JSON.parse(localStorage.getItem("low"));
-      let midLocal = JSON.parse(localStorage.getItem("mid"));
-      let highLocal = JSON.parse(localStorage.getItem("high"));
-      let doneLocal = JSON.parse(localStorage.getItem("done"));
-      let pinnedLocal = JSON.parse(localStorage.getItem("pinned"));
-      setLow(lowLocal);
-      setMid(midLocal);
-      setHigh(highLocal);
-      setDone(doneLocal);
-      setPinned(pinnedLocal);
-  }
+  },[low, mid, high, done, pinned]);
 
   return (
     <div className="app">
@@ -61,7 +54,9 @@ const App = () => {
         setDone={setDone}
         pinned={pinned}
         setPinned={setPinned}
-        isDoneList={false}
+        high={high}
+        mid={mid}
+        low={low}
         isPinnedList={true}
       />
 
@@ -73,8 +68,9 @@ const App = () => {
         setDone={setDone}
         pinned={pinned}
         setPinned={setPinned}
-        isDoneList={false}
-        isPinnedList={false}
+        high={high}
+        mid={mid}
+        low={low}
       />
 
       <h1>Mid</h1>
@@ -85,7 +81,9 @@ const App = () => {
         setDone={setDone}
         pinned={pinned}
         setPinned={setPinned}
-        isPinnedList={false}
+        high={high}
+        mid={mid}
+        low={low}
       />
 
       <h1>Low</h1>
@@ -96,8 +94,9 @@ const App = () => {
         setDone={setDone}
         pinned={pinned}
         setPinned={setPinned}
-        isDoneList={false}
-        isPinnedList={false}
+        high={high}
+        mid={mid}
+        low={low}
       />
 
       <h1>Done</h1>
@@ -109,7 +108,9 @@ const App = () => {
         pinned={pinned}
         setPinned={setPinned}
         isDoneList={true}
-        isPinnedList={false}
+        high={high}
+        mid={mid}
+        low={low}
       />
     </div>
   );

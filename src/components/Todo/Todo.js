@@ -2,7 +2,7 @@ import React from 'react';
 import Icon from '../Icon/Icon';
 import '../../assets/sass/components/Todo/_todo.scss';
 
-const Todo = ({text, task, todo, setTodo, done, setDone, pinned, setPinned, isDoneList, isPinnedList}) => {
+const Todo = ({text, task, todo, setTodo, done, setDone, pinned, setPinned, high, mid, low, isDoneList, isPinnedList}) => {
     const removeHandler = () => {
         setTodo(todo.filter((element) => element.id !== task.id));
     }
@@ -24,19 +24,47 @@ const Todo = ({text, task, todo, setTodo, done, setDone, pinned, setPinned, isDo
     const undoHandler = () => {
         setDone(done.map((item) => {
             if(item.id === task.id){
-                console.log(item.priority);
+                switch (item.priority) {
+                    case "HIGH":
+                        high.push(item);    
+                        break;
+                    case "MID":
+                        mid.push(item);    
+                        break;    
+                    case "LOW":
+                        low.push(item);    
+                        break;    
+                    default:
+                        high.push(item);    
+                        break;
+                }
             }
             return item;
         }));
+        removeHandler();
     }
 
     const unpinHandler = () => {
         setPinned(pinned.map((item) => {
             if(item.id === task.id){
-                console.log(item.priority);
+                switch (item.priority) {
+                    case "HIGH":
+                        high.push(item);    
+                        break;
+                    case "MID":
+                        mid.push(item);    
+                        break;    
+                    case "LOW":
+                        low.push(item);    
+                        break;    
+                    default:
+                        high.push(item);    
+                        break;
+                }
             }
             return item;
         }));
+        removeHandler();
     }
 
     return(
