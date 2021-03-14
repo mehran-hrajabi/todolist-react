@@ -10,6 +10,7 @@ const App = () => {
   const [high, setHigh] = useState([]);
   const [done, setDone] = useState([]);
   const [pinned, setPinned] = useState([]);
+  const [numOfTasks, setNumOfTasks] = useState([]);
 
   useEffect(() => {
     let lowLocal = JSON.parse(localStorage.getItem("low"));
@@ -25,6 +26,9 @@ const App = () => {
   }, []);
 
   useEffect(() => {
+    setNumOfTasks([
+      pinned.length, high.length, mid.length, low.length, done.length
+    ]);
     localStorage.setItem('low', JSON.stringify(low));
     localStorage.setItem('mid', JSON.stringify(mid));
     localStorage.setItem('high', JSON.stringify(high));
@@ -46,7 +50,7 @@ const App = () => {
         setHigh={setHigh}
       />
 
-      <h1>Pinned</h1>
+      <h1>Pinned: <span>{numOfTasks[0]}</span></h1>
       <TodoList
         todo={pinned}
         setTodo={setPinned}
@@ -63,7 +67,7 @@ const App = () => {
         isPinnedList={true}
       />
 
-      <h1>High</h1>
+      <h1>High: <span>{numOfTasks[1]}</span></h1>
       <TodoList
         todo={high}
         setTodo={setHigh}
@@ -79,7 +83,7 @@ const App = () => {
         setHigh={setHigh}
       />
 
-      <h1>Mid</h1>
+      <h1>Mid: <span>{numOfTasks[2]}</span></h1>
       <TodoList
         todo={mid}
         setTodo={setMid}
@@ -95,7 +99,7 @@ const App = () => {
         setHigh={setHigh}
       />
 
-      <h1>Low</h1>
+      <h1>Low: <span>{numOfTasks[3]}</span></h1>
       <TodoList
         todo={low}
         setTodo={setLow}
@@ -111,7 +115,7 @@ const App = () => {
         setHigh={setHigh}
       />
 
-      <h1>Done</h1>
+      <h1>Done: <span>{numOfTasks[4]}</span></h1>
       <TodoList
         todo={done}
         setTodo={setDone}
