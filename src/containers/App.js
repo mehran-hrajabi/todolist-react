@@ -4,7 +4,6 @@ import TodoList from '../components/TodoList/TodoList';
 import '../assets/sass/containers/App/_app.scss';
 
 const App = () => {
-  const [inputText, setInputText] = useState("");
   const [low, setLow] = useState([]);
   const [mid, setMid] = useState([]);
   const [high, setHigh] = useState([]);
@@ -40,8 +39,6 @@ const App = () => {
     <div className="app">
       <h1>Todo List</h1>
       <Input
-        inputText={inputText}
-        setInputText={setInputText}
         low={low}
         setLow={setLow}
         mid={mid}

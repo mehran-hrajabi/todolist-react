@@ -3,7 +3,8 @@ import { v4 as uuidv4 } from 'uuid';
 import Icon from '../Icon/Icon';
 import '../../assets/sass/components/Input/_input.scss';
 
-const Input = ({inputText, setInputText, low, setLow, mid, setMid, high, setHigh}) => {
+const Input = ({low, setLow, mid, setMid, high, setHigh}) => {
+    const [inputText, setInputText] = useState("");
     const [priority, setPriority] = useState();
 
     const inputTextHandler = (e) => {
