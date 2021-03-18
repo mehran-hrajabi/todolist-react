@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from 'uuid';
 import Icon from '../Icon/Icon';
 import '../../assets/sass/components/Input/_input.scss';
 
-const Input = ({low, setLow, mid, setMid, high, setHigh}) => {
+const Input = ({todos, setTodos}) => {
     const [inputText, setInputText] = useState("");
     const [priority, setPriority] = useState();
 
@@ -13,28 +13,9 @@ const Input = ({low, setLow, mid, setMid, high, setHigh}) => {
 
     const setTodoHandler = (e) => {
         e.preventDefault();
-        switch (priority) {
-            case "HIGH":
-                setHigh([
-                    ...high, {text:inputText, priority:priority, id: uuidv4()}
-                ]);
-                break;
-            case "MID":
-                setMid([
-                    ...mid, {text:inputText, priority:priority, id: uuidv4()}
-                ]);
-                break;
-            case "LOW":
-                setLow([
-                    ...low, {text:inputText, priority:priority, id: uuidv4()}
-                ]);
-                break;
-            default:
-                setHigh([
-                    ...high, {text:inputText, priority:priority, id: uuidv4()}
-                ]);
-                break;
-        }
+        setTodos([
+            ...todos, {text:inputText, priority:priority, id: uuidv4()}
+        ]);
         setInputText("");
     }
 
