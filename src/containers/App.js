@@ -79,7 +79,7 @@ const App = () => {
         setTodos={setTodos}
         isDoneList={true}
         type="done"
-      />
+      /> 
     </div>
   );
 }

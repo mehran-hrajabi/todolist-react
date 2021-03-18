@@ -18,6 +18,7 @@ const TodoList = ({todos, setTodos, type}) => {
                         />                        
                     );
                 }
+                return null;
             }) : null}
             {type==="high"? todos.map((task) => {
                 if(task.priority === "HIGH"){
@@ -32,6 +33,7 @@ const TodoList = ({todos, setTodos, type}) => {
                         />                        
                     );
                 }
+                return null;
             }) : null}
             {type==="mid"? todos.map((task) => {
                 if(task.priority === "MID"){
@@ -46,6 +48,7 @@ const TodoList = ({todos, setTodos, type}) => {
                         />                        
                     );
                 }
+                return null;
             }) : null}
             {type==="low"? todos.map((task) => {
                 if(task.priority === "LOW"){
@@ -60,6 +63,7 @@ const TodoList = ({todos, setTodos, type}) => {
                         />                        
                     );
                 }
+                return null;
             }) : null}
             {type==="done"? todos.map((task) => {
                 if(task.priority === "DONE"){
@@ -74,6 +78,7 @@ const TodoList = ({todos, setTodos, type}) => {
                         />                        
                     );
                 }
+                return null;
             }) : null}
         </div>
     );

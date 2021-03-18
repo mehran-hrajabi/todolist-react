@@ -35,8 +35,9 @@ const Todo = ({text, task, todos, setTodos, type}) => {
         setTodos(todos.map((item) => {
             if(item.id === task.id){
                 let tempPriority = task.prevPriority;
+                console.log(task.prevPriority);
                 return{
-                    ...item, priority: tempPriority
+                    ...item, priority: tempPriority, prevPriority: "DONE"
                 }
             }
             return item;
@@ -47,8 +48,9 @@ const Todo = ({text, task, todos, setTodos, type}) => {
         setTodos(todos.map((item) => {
             if(item.id === task.id){
                 let tempPriority = task.prevPriority;
+                console.log(task.prevPriority);
                 return{
-                    ...item, priority: tempPriority
+                    ...item, priority: tempPriority, prevPriority:"PINNED"
                 }
             }
             return item;
