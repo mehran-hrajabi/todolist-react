@@ -1,16 +1,15 @@
 @import '../lib/var';
 @import '../lib/mixins';
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200&display=swap');
 
 *{
-    font-family: 'Times New Roman', Times, serif;
+	font-family : 'Nunito', sans-serif;
     font-style: normal;
     font-weight: normal;
     box-sizing : border-box;
 }
 
-body{
-    background-color: white;
-}
+body{background-color: white;}
 
 h1, h2, h3, p{color: white;}
 

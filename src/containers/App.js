@@ -44,28 +44,28 @@ const App = () => {
         setTodos={setTodos}
       />
 
-      <h1>Pinned: <span>{numOfTasks[0]}</span></h1>
+      <h2>Pinned: <span>{numOfTasks[0]}</span></h2>
       <TodoList
         todos={todos}
         setTodos={setTodos}
         type="pinned"
       />
 
-      <h1>High: <span>{numOfTasks[1]}</span></h1>
+      <h2>High: <span>{numOfTasks[1]}</span></h2>
       <TodoList
         todos={todos}
         setTodos={setTodos}
         type="high"
       />
 
-      <h1>Mid: <span>{numOfTasks[2]}</span></h1>
+      <h2>Mid: <span>{numOfTasks[2]}</span></h2>
       <TodoList
         todos={todos}
         setTodos={setTodos}
         type="mid"
       />
 
-      <h1>Low: <span>{numOfTasks[3]}</span></h1>
+      <h2>Low: <span>{numOfTasks[3]}</span></h2>
       <TodoList
         todos={todos}
         setTodos={setTodos}
@@ -73,7 +73,7 @@ const App = () => {
         type="low"
       />
 
-      <h1>Done: <span>{numOfTasks[4]}</span></h1>
+      <h2>Done: <span>{numOfTasks[4]}</span></h2>
       <TodoList
         todos={todos}
         setTodos={setTodos}

@@ -19,7 +19,7 @@
 
 @media only screen and (min-width: $mobileBp) and (max-width: $tabletBp) {
     .task-container{
-        height: 90px;
+        height: 120px;
         width: 400px;
         p{width: 50%;}
     }
@@ -39,7 +39,7 @@
 @media only screen and (max-width: $smallMobileBp) {
     .task-container{
         @include flex(column, center, space-between);
-        width: 200px;
+        width: 250px;
         height: 150px;
         padding: 5px;
         p{
