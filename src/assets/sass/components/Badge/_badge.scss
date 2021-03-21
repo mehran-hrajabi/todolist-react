@@ -1,0 +1,35 @@
+@import '../../base/base';
+
+.todoBadge{
+    position: absolute;
+    top: 0;
+    right: 2%;
+    margin-top: -12px;
+}
+
+.pinBadge{
+    @extend .todoBadge;
+    color: $elementGold;
+    transform: rotate(25deg);
+    margin-top: -25px;
+}
+
+.highBadge{
+    @extend .todoBadge;
+    color: $elementRed;
+}
+
+.midBadge{
+    @extend .todoBadge;
+    color: $elementYellow;
+}
+
+.lowBadge{
+    @extend .todoBadge;
+    color: $FontVanilla;
+}
+
+.doneBadge{
+    @extend .todoBadge;
+    color: $elementGreen;
+}

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Icon from '../Icon/Icon';
 import Modal from '../Modal/Modal';
+import Badge from '../Badge/Badge';
 import '../../assets/sass/components/Todo/_todo.scss';
 
 const Todo = ({text, task, todos, setTodos, type}) => {
@@ -65,6 +66,7 @@ const Todo = ({text, task, todos, setTodos, type}) => {
     return(
         <div className="task-container">
             <p>{text}</p>
+            <Badge badgeType={task.priority} />
             <div>
                 <Icon clicked={removeHandler} iconType="trash" btnType="task" />
                 <Icon clicked={showModalHandler} iconType="edit" btnType="task" />

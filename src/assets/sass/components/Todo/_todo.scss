@@ -2,12 +2,14 @@
 
 .task-container{
     @include flex(row, center, space-between);
+    position: relative;
     border: 1px solid $border;
     border-radius: 5px;
     background-color: $elementPurple;
     height: 70px;
     width: 500px;
     margin-bottom: 10px;
+    margin-top: 10px;
     padding-left: 10px;
     p{
         width: 60%;
