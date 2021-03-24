@@ -18,11 +18,7 @@ button, input, select{
     border: none;
     height: 48px;
 }
-button{width: 48px;}
 button,select{cursor: pointer;}
-
-.hidden{display: none;}
-.show{display: block;}
 
 option[value=HIGH]{color: $elementRed;}
 option[value=MID]{color: $elementYellow;}

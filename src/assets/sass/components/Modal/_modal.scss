@@ -1,5 +1,13 @@
 @import '../../base/base';
 
+.modalInput-basic{
+    background-color: $elementPurple;
+    color: white;
+    border-bottom: 1px solid $bottomBorder;
+    margin: 10px 0;
+    font-size: 20px;
+}
+
 .editModal{
     @include flex(column, center, center);
     border: 1px solid $border;
@@ -14,65 +22,50 @@
     min-height: 50%;
     opacity: 1;
     z-index: 2;
-    >input{
-        background-color: $elementPurple;
-        color: white;
-        border-bottom: 1px solid $bottomBorder;
+    input{
+        @extend .modalInput-basic;
         width: 300px;
         padding: 5px;
-        margin: 0 0 20px 0;
-        font-size: 20px;
     }
     select{
-        background-color: $elementPurple;
-        color: white;
-        border-bottom: 1px solid $bottomBorder;
+        @extend .modalInput-basic;
         width: 150px;
-        margin: 0 0 20px 0;
-        font-size: 20px;
     }
-    >button:first-child{
+    button:first-child{
         position: absolute;
         top: 0;
         right: 0;
     }
-    >button:last-child{
-        @include flex(initial, center, center);
+    button:last-child{
         background-color: $elementOrange;
         color: white;
         width: 200px;
         border-radius: 5px;
         font-weight: bold;
         font-size: 16px;
-        margin-top: 10px;
+        margin: 15px 0 0 0;
         transition-duration: 0.5s;
         &:hover{background-color: $elementYellow;}
     }
 }
 .openAnimation{
     animation-name: openModal;
-    animation-duration: 0.2s;
-    animation-timing-function: ease-in;
+    animation-duration: 0.6s;
+    animation-timing-function: ease-in-out;
 }
 .closeAnimation{
     animation-name: closeModal;
     animation-duration: 0.2s;
-    animation-timing-function: ease-in;
+    animation-timing-function: linear;
 }
 
 @keyframes openModal {
-    0%   {top:0;}
-    25%  {top:5%;}
-    50%  {top:10%;}
-    75%  {top:15%;}
-    100% {top:20%;}
+    0% {top: 0;}
+    100% {top: 20%;}
 }
 @keyframes closeModal {
-    0%   {top:20%;}
-    25%  {top:15%;}
-    50%  {top:10%;}
-    75%  {top:5%;}
-    100% {top:0;}
+    0% {top: 20%;}
+    100% {top: 0;}
 }
 
 @media only screen and (min-width: $tabletBp) and (max-width: $laptopBp) {

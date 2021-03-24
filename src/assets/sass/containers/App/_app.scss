@@ -2,7 +2,7 @@
 
 .app{
     @include flex(column, center, center);
-    border: 2px solid black;
+    border: 2px solid $border;
     padding: 50px;
     margin: auto;
     background-color: $originalPurple;
